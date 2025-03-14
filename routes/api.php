@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\V1\SaleReportController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\V1\ProductController;
@@ -33,3 +34,5 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::get('products/{product}', [ProductController::class, 'show'])->name('products.show');
 });
+
+Route::get('report-sale',[SaleReportController::class,'generateReportByRanges']);

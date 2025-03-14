@@ -24,7 +24,6 @@ class SaleController extends Controller
      */
     public function store(SaleRequestForm $request)
     {
-        Log::info("gaa");
         return $this->service->register($request);
     }
 }
